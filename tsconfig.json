@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["DOM", "esnext"],
+    "jsx": "react-jsx",
+//    "jsxImportSource": "@emotion/react",
+    "module": "commonjs",
+    "allowJs": true,
+    "sourceMap": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "outDir": "./build",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@pages/*": ["src/pages/*"],
+      "@styles/*": ["src/styles/*"],
+      "@constants/*": ["src/constants/*"],
+      "@utils/*": ["src/utils/*"],
+      "@apis/*": ["src/apis/*"],
+      "@contexts/*": ["src/contexts/*"],
+      "@globalTypes/*": ["src/globalTypes/*"],
+    }
+  },
+  "include": ["src", "config"],
+  "exclude": ["node_modules", "build"]
+}
