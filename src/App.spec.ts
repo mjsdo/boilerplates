@@ -1,9 +1,8 @@
-describe('ㅇ', () => {
-  const add = () => {
-    return 1;
-  };
+describe('테스트', () => {
+  const fn = jest.fn();
 
-  it('..', () => {
-    expect(add()).toBe(1);
+  it('테스트', () => {
+    fn();
+    expect(fn).toHaveBeenCalledTimes(1);
   });
 });
