@@ -10,14 +10,10 @@ module.exports = {
         corejs: { version: '3' },
       },
     ],
-    [
-      '@babel/preset-react',
-    ],
+    ['@babel/preset-react'],
     '@babel/preset-typescript',
   ],
-  plugins: [
-    [
-      isDevelopment && require.resolve('react-refresh/babel'),
-    ].filter(Boolean),
-  ],
+  // webpack js로 세팅하면 빈 배열 넣어도 되는데, ts로 세팅하면 빈 배열을 허용하지 않음.
+  // Error: .plugins[0] must include an object
+  plugins: [[isDevelopment ? require.resolve('react-refresh/babel') : {}]],
 };

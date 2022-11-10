@@ -4,7 +4,7 @@ import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { merge } from 'webpack-merge';
 
-const common = require('./webpack.common');
+import common from './webpack.common';
 
 const config: Configuration = {
   devtool: 'source-map',
@@ -25,4 +25,4 @@ const config: Configuration = {
   },
 };
 
-module.exports = merge(common, config);
+export default merge(common, config);

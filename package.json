@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "dev": "cross-env NODE_ENV=development webpack serve --config ./config/webpack.dev.ts --progress"
+    "dev": "cross-env NODE_ENV=development webpack serve --config ./config/webpack.dev.ts --progress",
+    "build": "cross-env NODE_ENV=production webpack --config ./config/webpack.prod.ts --progress"
   },
   "keywords": [],
   "author": "",
@@ -44,6 +45,7 @@
     "prettier": "^2.7.1",
     "react-refresh": "^0.14.0",
     "style-loader": "^3.3.1",
+    "terser-webpack-plugin": "^5.3.6",
     "ts-jest": "^29.0.3",
     "ts-node": "^10.9.1",
     "tsconfig-paths-webpack-plugin": "^4.0.0",
