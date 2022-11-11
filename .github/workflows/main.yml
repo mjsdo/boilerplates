@@ -3,23 +3,16 @@ name: asnity
 
 on:
   push:
-    branches: [ test ]
-  pull_request: 
-    branches: [ test ]
+    branches:
+      - test
   
 jobs:
   build:
     runs-on: ubuntu-latest
-   
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        
+      - uses: actions/checkout@v3
       - name: Install
         run: npm install
-        
-      - name: Build
-        run: npm run build
         
       - name: Deploy
         env:
