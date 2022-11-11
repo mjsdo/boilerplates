@@ -4,7 +4,7 @@ name: asnity
 on: 
   push:
     branches:
-      - test    # test 브랜치에 push가 발생했을 때
+      - test
             
 jobs:
   build:
@@ -14,11 +14,11 @@ jobs:
         uses: actions/checkout@v3
         
       - name: Install Dependencies # node module install
-        run: npm
+        run: npm i
 
       - name: Deploy 
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        run: 
-          npm run deploy
+          AWS_REGION: 'ap-northeast-2'
+        run: npm run deploy
